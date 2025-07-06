@@ -31,8 +31,8 @@
 ## 📦 Installation
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/RtxConfigz/Content-x/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/connect-x/connect-x/main/install.sh)
 ```
 ## 👨‍💻 Developer Info
 
-- 🔧 Developed with ❤️ by [Rtxconfigz](https://github.com/Rtxconfigz)
+- 🔧 Developed with ❤️ by [Rtxconfigz](https://github.com/connect-xs)
