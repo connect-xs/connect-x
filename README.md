@@ -30,8 +30,10 @@
 
 ## 📦 Installation
 
+### 🔧 Installation
+
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/connect-xs/connect-x/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/connect-xs/Content-x/main/install.sh)
 ```
 ### 👨‍💻 Developer ♥️
 - GitHub: [connect-xs](https://github.com/connect-xs)
