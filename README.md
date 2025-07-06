@@ -31,8 +31,9 @@
 ## 📦 Installation
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/connect-x/connect-x/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/connect-xs/connect-x/main/install.sh)
 ```
-## 👨‍💻 Developer Info
+### 👨‍💻 Developer ♥️
+- GitHub: [connect-xs](https://github.com/connect-xs)
 
-- 🔧 Developed with ❤️ by [Rtxconfigz](https://github.com/connect-xs)
+### ⚙️ System Requirements
