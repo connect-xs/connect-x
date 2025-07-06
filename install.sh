@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# Content-x Installer Script
-# For Ubuntu/Debian VPS
-
+# Content-x Installer Script (Optimized)
 set -e
 
 GREEN="\033[1;32m"
@@ -22,7 +20,7 @@ function print_banner() {
     echo "██║     ██║   ██║██║╚██╗██║   ██║   ██╔══╝  ██║╚██╗██║   ██║   "
     echo "╚██████╗╚██████╔╝██║ ╚████║   ██║   ███████╗██║ ╚████║   ██║   "
     echo " ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═══╝   ╚═╝   "
-    echo -e "        ${CYAN}⚡Full HD Content-x Video Uploader ⚡${RESET}"
+    echo -e "        ${CYAN}⚡ Full HD Content-x Video Uploader ⚡${RESET}"
     echo
     sleep 2
 }
@@ -33,14 +31,18 @@ print_banner
 info "📦 Updating system packages..."
 sudo apt update -y && sudo apt upgrade -y
 
-info "🐍 Installing Python, pip, and dependencies..."
+info "🐍 Installing Python, pip, and other dependencies..."
 sudo apt install -y python3 python3-pip ffmpeg git lolcat pv
 
-info "📂 Cloning Content-x repo..."
-if [ ! -d "Content-x" ]; then
-    git clone https://github.com/RTXFORCE-X/Content-x.git | lolcat
-fi
+info "📁 Downloading Content-x files..."
+mkdir -p Content-x
 cd Content-x
+
+curl -fsSLO https://raw.githubusercontent.com/connect-xs/Content-x/main/content-x.py
+curl -fsSLO https://raw.githubusercontent.com/connect-xs/Content-x/main/downloader.py
+curl -fsSLO https://raw.githubusercontent.com/connect-xs/Content-x/main/uploader.py
+curl -fsSLO https://raw.githubusercontent.com/connect-xs/Content-x/main/requirements.txt
+curl -fsSLO https://raw.githubusercontent.com/connect-xs/Content-x/main/.env.example
 
 info "📁 Creating virtual environment..."
 python3 -m venv venv
@@ -56,12 +58,12 @@ cat <<EOF | lolcat
 🎉 NEXT STEPS:
 
 1. ⚙️ Configure your .env file:
-   - Copy the template: cp .env.example .env
-   - Edit it with your credentials.
+   - cp .env.example .env
+   - Edit it with your credentials
 
-2. ▶️ Run:
+2. ▶️ Run the tool:
    source venv/bin/activate
-   python contentx.py links.txt
+   python content-x.py links.txt
 
 3. 📲 First time will ask Telegram login.
 
